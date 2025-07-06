@@ -1,9 +1,12 @@
 set -e
 source ./.env
 
+export LD_LIBRARY_PATH=/usr/share/java/opencv4:/home/flowpilot/flowpilot/libs:/usr/share/java/:$LD_LIBRARY_PATH
+export PYTHONPATH=$PWD
+
 export WIDE_ROAD_CAMERA_SOURCE="selfdrive/assets/fcam.avi" # no affect on android
 export ROAD_CAMERA_SOURCE="selfdrive/assets/tmp" # no affect on android
-export USE_GPU="0" # no affect on android, gpu always used on android
+export USE_GPU="1" # no affect on android, gpu always used on android
 export PASSIVE="0"
 #export MSGQ="1"
 #export USE_PARAMS_NATIVE="1"

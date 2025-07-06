@@ -37,6 +37,8 @@ UNREGISTERED_DONGLE_ID = "UnregisteredDevice"
 
 params = Params()
 
+params.put("UserToken", "000000")
+
 def flowpilot_running():
     ret = False
     pid_bytes = params.get("FlowpilotPID")

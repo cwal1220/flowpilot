@@ -66,10 +66,6 @@ public class ONNXModelRunner extends ModelRunner{
 
     @Override
     public void dispose(){
-        try {
-            env.close();
-        } catch (OrtException e) {
-            throw new RuntimeException(e);
-        }
+        env.close();
     }
 }
