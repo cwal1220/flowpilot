@@ -25,7 +25,7 @@ fail() {
 
 # install android and java sdk
 sudo apt update
-sudo apt install -y openjdk-11-jdk git
+sudo apt install -y openjdk-11-jdk git unzip
 wget -q --show-progress --no-clobber --tries=5 https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip
 unzip commandlinetools-linux-8092744_latest.zip
 mkdir -p ~/Android/Sdk/cmdline-tools/latest
@@ -46,7 +46,7 @@ yes | sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install -y python3.9 python3.9-dev python3.9-distutils python3-pip scons
 
 # get flowpilot
-cd ~/ && git clone https://github.com/flowdriveai/flowpilot.git
+cd ~/ && git clone https://github.com/cwal1220/flowpilot
 cd flowpilot && git submodule update --init
 
 pip install pipenv numpy pycryptodome
